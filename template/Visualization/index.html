@@ -1,0 +1,212 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'image/navigation/1.jpg' %}" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    <title>Web Attack</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{%static 'css/custom.css' %}" rel="stylesheet">
+
+    <!-- Helper Styles -->
+    <link href="{%static 'css/loaders.css' %}" rel="stylesheet">
+    <link href="{%static 'css/swiper.min.css' %}" rel="stylesheet">
+    <link href="{%static 'css/scroll.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/animation.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nivo-lightbox.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nivo_themes/default/default.css' %}">
+    <!-- Font Awesome Style -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+<!--
+<div class="loader loader-bg">
+  <div class="loader-inner ball-clip-rotate-pulse">
+    <div></div>
+    <div></div>
+  </div>
+</div> -->
+
+
+<!-- Top Navigation
+    ==================================================  -->
+
+    <nav class="navbar navbar-toggleable-md mb-4 top-bar navbar-static-top sps sps--abv">
+        <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'index' %}">Web<span>Attack</span></a>
+      <div class="collapse navbar-collapse" id="navbarCollapse1">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'index' %}">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'dataset' %}">DataSet</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="{% url 'visualization' %}">Visualization<span class="sr-only">(current)</span> </a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'prediction' %}">Prediction</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'gallery' %}#gallery">Image Gallery</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'contact' %}#contact-sec">Contact</a> </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+
+<!-- GALLERY
+    ==================================================  -->
+
+<section class="gallery-sec" id="gallery">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+        <div class="heading text-md-center text-xs-center">
+          <br><br>
+          <h2><small>Story Through Images</small>STATIC VISUALIZATION</h2>
+        </div>
+        </div>
+        <div class="col-md-12">
+          <div class="iso-box-section wow fadeInUp" data-wow-delay="0.9s">
+            <div class="iso-box-wrapper col4-iso-box">
+              <div class="iso-box london paris ny col-md-4 col-sm-6">
+                <div class="gallery-thumb"> <a href="{%static 'image/bar/ACK Flag Count.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/bar/ACK Flag Count.jpg' %}" class="fluid-img" alt="Gallery">
+                  <div class="gallery-overlay">
+                    <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="iso-box london ny hn col-md-4 col-sm-6">
+                <div class="gallery-thumb"> <a href="{%static 'image/bar/Fwd Packet Length Mean.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/bar/Fwd Packet Length Mean.jpg' %}" class="fluid-img" alt="Gallery">
+                  <div class="gallery-overlay">
+                    <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="iso-box hn col-md-4 col-sm-6">
+                <div class="gallery-thumb"> <a href="{%static 'image/bar/Fwd Packet Length Std.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/bar/Fwd Packet Length Std.jpg' %}" class="fluid-img" alt="Gallery">
+                  <div class="gallery-overlay">
+                    <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="iso-box london col-md-4 col-sm-6">
+                <div class="gallery-thumb"> <a href="{%static 'image/bar/Packet Length Variance.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/bar/Packet Length Variance.jpg' %}" class="fluid-img" alt="Gallery">
+                  <div class="gallery-overlay">
+                    <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="iso-box ny col-md-4 col-sm-6">
+                <div class="gallery-thumb"> <a href="{%static 'image/bar/PSH Flag Count.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/bar/PSH Flag Count.jpg' %}" class="fluid-img" alt="Gallery">
+                  <div class="gallery-overlay">
+                    <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="iso-box paris lunch col-md-4 col-sm-6">
+                <div class="gallery-thumb"> <a href="{%static 'image/bar/URG Flag Count.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/bar/URG Flag Count.jpg' %}" class="fluid-img" alt="Gallery">
+                  <div class="gallery-overlay">
+                    <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                  </div>
+                  </a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><br>
+
+
+<!-- DYNAMIC PREDICTION
+    ================================================== -->
+
+    <div class="dynamic" style='align-content:center;text-align:center;' id="vis1">
+      <div class="heading text-md-center text-xs-center"><br><br><br><br><br>
+      <h2 style='color:rgb(255, 0, 0);'><strong>DYNAMIC VISUALIZATION</strong></h2>
+      </div><br><br>
+      <div class="row">
+        <div class="col-md-6" style='align-content:center;text-align:center;' id="vis1">
+          <form method="POST" action="{% url 'visualization' %}">
+            <select name="col_name" id="col_name" onchange="this.form.submit()">
+              {{cols}}
+              {% for i in cols %}
+                  <option value="{{i}}">{{i}}</option>
+              {% endfor %}
+            </select>
+            <center><b><br>{{tab|safe}}</b></center><br><br>
+            {% csrf_token %}
+          </form>
+        </div>
+        <div class="col-md-6" style='align-content:center;text-align:center;' id="vis1">
+          <img src="data:image/png;base64,{{img|safe}}" width="500px" id="v1"><br><br>
+        </div>
+      </div>
+    </div>
+
+
+<!-- FOOTER
+    ================================================== -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'index' %}#benefits">Benefits</a></li>
+              <li><a href="{% url 'index' %}#about">About</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="{% url 'index' %}#tip">Tips</a></li>
+              <li><a href="{% url 'index' %}#gallery">Image Gallery</a></li>
+              <li><a href="{% url 'index' %}#contact-sec">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Term and Services</a></li>
+              <li><a href="{% url 'index' %}#about">About Web Security</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h2>About our Website</h2>
+            <p>Main Focus of this site is to check different attacks which were happening on different sites in order to steal data or to shutdown their website.</p>
+          </div>
+        </div>
+        <div class="row copy-footer">
+          <div class="col-sm-6 col-md-3"> &copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> WebAttack.co.in </div>
+          <div class="col-sm-6 col-md-3 pull-right text-xs-right">Created with <i class="fa fa-heart"></i></div>
+        </div>
+      </div>
+    </footer>
+
+<script src="{%static 'js/jquery.min.js' %}" ></script> 
+<script src="{%static 'js/bootstrap.min.js' %}"></script> 
+<script src="{%static 'js/scrollPosStyler.js' %}"></script> 
+<script src="{%static 'js/swiper.min.js' %}"></script> 
+<script src="{%static 'js/isotope.min.js' %}"></script> 
+<script src="{%static 'js/nivo-lightbox.min.js' %}"></script> 
+<script src="{%static 'js/wow.min.js' %}"></script> 
+<script src="{%static 'js/core.js' %}"></script> 
+<script src="{%static 'js/particles.js' %}"></script>
+<script src="{%static 'js/scroll.js' %}"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
+<script src="{%static '../../assets/js/ie10-viewport-bug-workaround.js' %}"></script>
+
+</body>
+</html>

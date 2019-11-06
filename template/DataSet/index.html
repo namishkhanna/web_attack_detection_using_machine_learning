@@ -1,0 +1,688 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'image/navigation/1.jpg' %}" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    <title>Web Attack</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{%static 'css/custom.css' %}" rel="stylesheet">
+
+    <!-- Helper Styles -->
+    <link href="{%static 'css/loaders.css' %}" rel="stylesheet">
+    <link href="{%static 'css/swiper.min.css' %}" rel="stylesheet">
+    <link href="{%static 'css/scroll.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/animation.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nivo-lightbox.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nivo_themes/default/default.css' %}">
+    <!-- Font Awesome Style -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+</head>
+<body>
+<!--
+<div class="loader loader-bg">
+  <div class="loader-inner ball-clip-rotate-pulse">
+    <div></div>
+    <div></div>
+  </div>
+</div> -->
+
+<!-- Top Navigation
+================================================== -->
+
+    <nav class="navbar navbar-toggleable-md mb-4 top-bar navbar-static-top sps sps--abv">
+        <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'index' %}">Web<span>Attack</span></a>
+      <div class="collapse navbar-collapse" id="navbarCollapse1">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'index' %}">Home</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="{% url 'dataset' %}">DataSet<span class="sr-only">(current)</span> </a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'visualization' %}">Visualization</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'prediction' %}">Prediction</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'gallery' %}#gallery">Image Gallery</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'contact' %}#contact-sec">Contact</a> </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+
+  <div id="data1">
+
+
+    <!-- ATTACK
+    ================================================== -->
+    
+    <div class="container">
+      <div class="heading text-md-center text-xs-center"><br><br><br><br><br>
+          <h2 style='color:rgb(255, 0, 0);'><strong>COMMON ATTACKS</strong></h2>
+        </div>
+        <br>
+      <table class="table table-striped table-responsive" style='color:black;'>
+      <tbody>
+      <tr valign="top"><th>Attack</th><th>Tools</th><th>Duration</th><th>Attacker</th><th>Victim</th></tr>
+      <tr valign="top">
+      <td>
+      <p>Bruteforce attack</p>
+      </td>
+      <td>
+      <p>FTP – Patator</p>
+      <p>SSH – Patator</p>
+      </td>
+      <td>One day</td>
+      <td>Kali linux</td>
+      <td width="91">Ubuntu 16.4 (Web Server)</td>
+      </tr>
+      <tr valign="top">
+      <td>
+      <p>DoS attack</p>
+      </td>
+      <td>
+      <p>Hulk, GoldenEye,</p>
+      <p>Slowloris, Slowhttptest</p>
+      </td>
+      <td>One day</td>
+      <td>Kali linux</td>
+      <td>Ubuntu 16.4 (Apache)</td>
+      </tr>
+      <tr valign="top">
+      <td>DoS attack</td>
+      <td>Heartleech</td>
+      <td>One day</td>
+      <td>Kali linux</td>
+      <td>Ubuntu 12.04 (Open SSL)</td>
+      </tr>
+      <tr valign="top">
+      <td>Web attack</td>
+      <td>
+      <ul>
+      <li>Damn Vulnerable Web App (DVWA)</li>
+      <li>In-house selenium framework (XSS and Brute-force)</li>
+      </ul>
+      </td>
+      <td>Two days</td>
+      <td>Kali linux</td>
+      <td>Ubuntu 16.4 (Web Server)</td>
+      </tr>
+      <tr valign="top">
+      <td>Infiltration attack</td>
+      <td>
+      <ul>
+      <li>First level: Dropbox download in a windows machine</li>
+      <li>Second Level: Nmap and portscan</li>
+      </ul>
+      </td>
+      <td>Two days</td>
+      <td>Kali linux</td>
+      <td>Windows Vista and Macintosh</td>
+      </tr>
+      <tr valign="top">
+      <td>Botnet attack</td>
+      <td>
+      <ul>
+      <li>Ares (developed by Python): remote shell, file upload/download, capturing</li>
+      <li>screenshots and key logging</li>
+      </ul>
+      </td>
+      <td>One day</td>
+      <td>Kali linux</td>
+      <td>Windows Vista, 7, 8.1, 10 (32-bit) and 10 (64-bit)</td>
+      </tr>
+      <tr valign="top">
+      <td>DDoS+PortScan</td>
+      <td>Low Orbit Ion Canon (LOIC) for UDP, TCP, or HTTP requests</td>
+      <td>Two days</td>
+      <td>Kali linux</td>
+      <td>Windows Vista, 7, 8.1, 10 (32-bit) and 10 (64-bit)</td>
+      </tr>
+      </tbody>
+      </table>
+    </div><br>
+    
+    <!-- ATTACK DESCRIPTION
+    ================================================== -->
+    
+    <div class="container">
+      <div class="heading text-md-center text-xs-center">
+          <h2 style='color:black;text-align:left;'><strong>DESCRIPTION</strong></h2>
+      </div>
+        <br>
+    <p style='color:black;'><u><strong>B-Profiles</strong></u> : Encapsulate the entity behaviours of users using various machine learning and statistical analysis techniques (such as K-Means, Random Forest, SVM, and J48). The encapsulated features are distributions of packet sizes of a protocol, number of packets per flow, certain patterns in the payload, size of payload, and request time distribution of a protocol. The following protocols will be simulated in our testbed environment: HTTPS, HTTP, SMTP, POP3, IMAP, SSH, and FTP. Based on our initial observations majority of traffic is HTTP and HTTPS.</p>
+    <p style='color:black;'><u><strong>M-Profiles</strong></u> : Attempt to describe an attack scenario in an unambiguous manner. In the simplest case, humans can interpret these profiles and subsequently carry them out. Idealistically, autonomous agents along with compilers would be employed to interpret and execute these scenarios. For attacks we considered six different scenarios.</p>
+    <p style='color:black;'><u><strong>Infiltration of the network from inside</strong></u> : Infiltration of the network from inside: In this scenario, we send a malicious file via an email to the victim and exploit an application vulnerability. After successful exploitation, a backdoor will be executed on the victim’s computer and then we use his computer to scan the internal network for other vulnerable boxes and exploit them if possible.</p>
+    <p style='color:black;'><u><strong>HTTP denial of service</strong></u> : In this scenario, we utilize Slowloris and LOIC as our main tools, which have been proven to make Web servers completely inaccessible using a single attacking machine. Slowloris starts by making a full TCP connection to the remote server. The tool holds the connection open by sending valid, incomplete HTTP requests to the server at regular intervals to keep the sockets from closing. Since any Web server has a finite ability to serve connections, it will only be a matter of time before all sockets are used up and no other connection can be made. Also, HOIC is another famous application which can launch DoS attacks against websites.</p>
+    <p style='color:black;'><u><strong>Brute force attacks</strong></u> : Brute force attacks are very common against networks as they tend to break into accounts with weak username and password combinations. The final scenario has been designed with the goal of acquiring an SSH and MySQL account by running a dictionary brute force attack against the main server.</p>
+    
+    </div><br><br><br>
+    
+    
+    <!-- COLUMNS DESCRIPTION
+    ================================================== -->
+    
+    <div class="container" style='align-items:center' width="100%">
+      <div class="heading text-md-center text-xs-center">
+          <h2 style='color:black;text-align:left'><strong>COLUMNs' DESCRIPTION</strong></h2>
+      </div>
+        <br>
+    <table class="table table-striped table-responsive" style='color:black;'>
+      <tbody>
+      <tr valign="top"><th>Feature Name</th><th>Description</th></tr>
+      <tr valign="top">
+      <td>fl_dur</td>
+      <td>Flow duration</td>
+      </tr>
+      <tr valign="top">
+      <td>tot_fw_pk</td>
+      <td>Total packets in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>tot_bw_pk</td>
+      <td>Total packets in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>tot_l_fw_pkt</td>
+      <td>Total size of packet in forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_pkt_l_max</td>
+      <td>Maximum size of packet in forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_pkt_l_min</td>
+      <td>Minimum size of packet in forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_pkt_l_avg</td>
+      <td>Average size of packet in forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_pkt_l_std</td>
+      <td>Standard deviation size of packet in forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>Bw_pkt_l_max</td>
+      <td>Maximum size of packet in backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>Bw_pkt_l_min</td>
+      <td>Minimum size of packet in backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>Bw_pkt_l_avg</td>
+      <td>Mean size of packet in backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>Bw_pkt_l_std</td>
+      <td>Standard deviation size of packet in backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fl_byt_s</td>
+      <td>flow byte rate that is number of packets transferred per second</td>
+      </tr>
+      <tr valign="top">
+      <td>fl_pkt_s</td>
+      <td>flow packets rate that is number of packets transferred per second</td>
+      </tr>
+      <tr valign="top">
+      <td>fl_iat_avg</td>
+      <td>Average time between two flows</td>
+      </tr>
+      <tr valign="top">
+      <td>fl_iat_std</td>
+      <td>Standard deviation time two flows</td>
+      </tr>
+      <tr valign="top">
+      <td>fl_iat_max</td>
+      <td>Maximum time between two flows</td>
+      </tr>
+      <tr valign="top">
+      <td>fl_iat_min</td>
+      <td>Minimum time between two flows</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_iat_tot</td>
+      <td>Total time between two packets sent in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_iat_avg</td>
+      <td>Mean time between two packets sent in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_iat_std</td>
+      <td>Standard deviation time between two packets sent in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_iat_max</td>
+      <td>Maximum time between two packets sent in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_iat_min</td>
+      <td>Minimum time between two packets sent in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_iat_tot</td>
+      <td>Total time between two packets sent in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_iat_avg</td>
+      <td>Mean time between two packets sent in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_iat_std</td>
+      <td>Standard deviation time between two packets sent in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_iat_max</td>
+      <td>Maximum time between two packets sent in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_iat_min</td>
+      <td>Minimum time between two packets sent in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_psh_flag</td>
+      <td>Number of times the PSH flag was set in packets travelling in the forward direction (0 for UDP)</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_psh_flag</td>
+      <td>Number of times the PSH flag was set in packets travelling in the backward direction (0 for UDP)</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_urg_flag</td>
+      <td>Number of times the URG flag was set in packets travelling in the forward direction (0 for UDP)</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_urg_flag</td>
+      <td>Number of times the URG flag was set in packets travelling in the backward direction (0 for UDP)</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_hdr_len</td>
+      <td>Total bytes used for headers in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_hdr_len</td>
+      <td>Total bytes used for headers in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_pkt_s</td>
+      <td>Number of forward packets per second</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_pkt_s</td>
+      <td>Number of backward packets per second</td>
+      </tr>
+      <tr valign="top">
+      <td>pkt_len_min</td>
+      <td>Minimum length of a flow</td>
+      </tr>
+      <tr valign="top">
+      <td>pkt_len_max</td>
+      <td>Maximum length of a flow</td>
+      </tr>
+      <tr valign="top">
+      <td>pkt_len_avg</td>
+      <td>Mean length of a flow</td>
+      </tr>
+      <tr valign="top">
+      <td>pkt_len_std</td>
+      <td>Standard deviation length of a flow</td>
+      </tr>
+      <tr valign="top">
+      <td>pkt_len_va</td>
+      <td>Minimum inter-arrival time of packet</td>
+      </tr>
+      <tr valign="top">
+      <td>fin_cnt</td>
+      <td>Number of packets with FIN</td>
+      </tr>
+      <tr valign="top">
+      <td>syn_cnt</td>
+      <td>Number of packets with SYN</td>
+      </tr>
+      <tr valign="top">
+      <td>rst_cnt</td>
+      <td>Number of packets with RST</td>
+      </tr>
+      <tr valign="top">
+      <td>pst_cnt</td>
+      <td>Number of packets with PUSH</td>
+      </tr>
+      <tr valign="top">
+      <td>ack_cnt</td>
+      <td>Number of packets with ACK</td>
+      </tr>
+      <tr valign="top">
+      <td>urg_cnt</td>
+      <td>Number of packets with URG</td>
+      </tr>
+      <tr valign="top">
+      <td>cwe_cnt</td>
+      <td>Number of packets with CWE</td>
+      </tr>
+      <tr valign="top">
+      <td>ece_cnt</td>
+      <td>Number of packets with ECE</td>
+      </tr>
+      <tr valign="top">
+      <td>down_up_ratio</td>
+      <td>Download and upload ratio</td>
+      </tr>
+      <tr valign="top">
+      <td>pkt_size_avg</td>
+      <td>Average size of packet</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_seg_avg</td>
+      <td>Average size observed in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_seg_avg</td>
+      <td>Average size observed in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_byt_blk_avg</td>
+      <td>Average number of bytes bulk rate in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_pkt_blk_avg</td>
+      <td>Average number of packets bulk rate in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_blk_rate_avg</td>
+      <td>Average number of bulk rate in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_byt_blk_avg</td>
+      <td>Average number of bytes bulk rate in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_pkt_blk_avg</td>
+      <td>Average number of packets bulk rate in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_blk_rate_avg</td>
+      <td>Average number of bulk rate in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>subfl_fw_pk</td>
+      <td>The average number of packets in a sub flow in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>subfl_fw_byt</td>
+      <td>The average number of bytes in a sub flow in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>subfl_bw_pkt</td>
+      <td>The average number of packets in a sub flow in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>subfl_bw_byt</td>
+      <td>The average number of bytes in a sub flow in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_win_byt</td>
+      <td>Number of bytes sent in initial window in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>bw_win_byt</td>
+      <td># of bytes sent in initial window in the backward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>Fw_act_pkt</td>
+      <td># of packets with at least 1 byte of TCP data payload in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>fw_seg_min</td>
+      <td>Minimum segment size observed in the forward direction</td>
+      </tr>
+      <tr valign="top">
+      <td>atv_avg</td>
+      <td>Mean time a flow was active before becoming idle</td>
+      </tr>
+      <tr valign="top">
+      <td>atv_std</td>
+      <td>Standard deviation time a flow was active before becoming idle</td>
+      </tr>
+      <tr valign="top">
+      <td>atv_max</td>
+      <td>Maximum time a flow was active before becoming idle</td>
+      </tr>
+      <tr valign="top">
+      <td>atv_min</td>
+      <td>Minimum time a flow was active before becoming idle</td>
+      </tr>
+      <tr valign="top">
+      <td>idl_avg</td>
+      <td>Mean time a flow was idle before becoming active</td>
+      </tr>
+      <tr valign="top">
+      <td>idl_std</td>
+      <td>Standard deviation time a flow was idle before becoming active</td>
+      </tr>
+      <tr valign="top">
+      <td>idl_max</td>
+      <td>Maximum time a flow was idle before becoming active</td>
+      </tr>
+      <tr valign="top">
+      <td>idl_min</td>
+      <td>Minimum time a flow was idle before becoming active</td>
+      </tr>
+      </tbody>
+      </table><br>
+    </div>
+    
+    
+    <!-- HeatMap
+    ================================================== -->
+    
+    <section class="gallery-sec" id="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+      <div class="heading text-md-center text-xs-center">
+        <h2><small>Analysis Through Images</small>Heat Maps</h2>
+      </div>
+      </div>
+      <div class="col-md-12">
+        <div class="iso-box-section wow fadeInUp" data-wow-delay="0.9s">
+          <div class="iso-box-wrapper col4-iso-box">
+            <div class="iso-box london paris ny col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/1.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/1.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box london ny hn col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/2.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/2.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box hn col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/3.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/3.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box london col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/4.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/4.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box ny col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/5.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/5.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/6.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/6.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/7.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/7.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/8.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/8.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/9.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/9.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/10.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/10.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/11.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/11.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/12.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/12.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/13.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/13.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/14.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/14.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="iso-box paris lunch col-md-4 col-sm-6">
+              <div class="gallery-thumb"> <a href="{%static 'image/heatmap/15.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/heatmap/15.jpg' %}" class="fluid-img" alt="Gallery">
+                <div class="gallery-overlay">
+                  <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                </div>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <!-- DOWNLOAD
+      ================================================== -->
+      
+    <div id="data1">
+      <div class="heading text-md-center text-xs-center" style='text-align:left;'>
+          <h2 style='text-align:left;color:black;'><strong>DOWNLOAD DATASET</strong></h2> 
+        </div>
+        <a href="{%static 'dataset/dataset.zip' %}" download  style='text-align:left;'>
+          <img src="{%static 'image/logo/1.png' %}" alt="dataset" value="dataset" height=80px style='text-align:left;'>
+          Download Dataset
+        </a>
+      </div>
+  </div>
+
+
+<!-- FOOTER
+    ================================================== -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'index' %}#benefits">Benefits</a></li>
+              <li><a href="{% url 'index' %}#about">About</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="{% url 'index' %}#tip">Tips</a></li>
+              <li><a href="{% url 'index' %}#gallery">Image Gallery</a></li>
+              <li><a href="{% url 'index' %}#contact-sec">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Term and Services</a></li>
+              <li><a href="{% url 'index' %}#about">About Web Security</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h2>About our Website</h2>
+            <p>Main Focus of this site is to check different attacks which were happening on different sites in order to steal data or to shutdown their website.</p>
+          </div>
+        </div>
+        <div class="row copy-footer">
+          <div class="col-sm-6 col-md-3"> &copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> WebAttack.co.in </div>
+          <div class="col-sm-6 col-md-3 pull-right text-xs-right">Created with <i class="fa fa-heart"></i></div>
+        </div>
+      </div>
+    </footer>
+
+
+<script src="{%static 'js/jquery.min.js' %}" ></script> 
+<script src="{%static 'js/bootstrap.min.js' %}"></script> 
+<script src="{%static 'js/scrollPosStyler.js' %}"></script> 
+<script src="{%static 'js/swiper.min.js' %}"></script> 
+<script src="{%static 'js/isotope.min.js' %}"></script> 
+<script src="{%static 'js/nivo-lightbox.min.js' %}"></script> 
+<script src="{%static 'js/wow.min.js' %}"></script> 
+<script src="{%static 'js/core.js' %}"></script> 
+<script src="{%static 'js/particles.js' %}"></script>
+<script src="{%static 'js/scroll.js' %}"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
+<script src="{%static '../../assets/js/ie10-viewport-bug-workaround.js' %}"></script>
+
+</body>
+</html>
