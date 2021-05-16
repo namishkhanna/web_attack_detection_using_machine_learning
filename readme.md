@@ -1,6 +1,9 @@
 # Web Attack Detection Using Machine Learning :-
 This is a Web Attack Detection Website made using HTML, CSS, Django and Machine Learning Algorithm.
 
+# Note: 
+Download Dataset in "/static/dataset/" Folder, Instructions given in that Directory.
+
 # How to Create Project in Django :-
 1. activate conda environment using 'activate ml'
 
